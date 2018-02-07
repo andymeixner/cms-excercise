@@ -3,7 +3,7 @@
 * Plugin Name: Gifs with GIPHY
 * Plugin URI: 
 * Description: A plugin for integrating gifs to posts
-* Version: 1.0.0
+* Version: 1.0
 * Author: Andy Meixner
 **/
 
