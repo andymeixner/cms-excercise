@@ -14,8 +14,9 @@
                     width : modalw,
                     height : modalh,
                     inline : true,
-                    resizable: true,
-                    scrollbars: true,
+                    resizable: false,
+                    scrollbars: false,
+                    classes: 'gif-modal'
                    /* onsubmit: function( e ) {
                         editor.insertContent( 'This is your whatever: ' + e.data.text + ' ' + e.data.text2 );
                     }*/
