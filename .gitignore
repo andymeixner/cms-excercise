@@ -1,2 +1,5 @@
 .DS_Store
 wp
+vendor
+composer.lock
+composer.phar
