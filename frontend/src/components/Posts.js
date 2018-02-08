@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Moment from 'react-moment';
 
 class Posts extends Component {
   render(){
@@ -11,7 +12,7 @@ class Posts extends Component {
                 <a href="post.html">
                   <h2 className="post-title">{ post.title }</h2>
                   <h3 className="post-subtitle">Lorem Ipsum</h3>
-                  <p className="post-meta">Posted by <span className="post-author">Andy Meixner</span>on <span className="post-date">September 24, 2018</span></p>
+                  <p className="post-meta">Posted by <span className="post-author">Andy Meixner</span> on <span className="post-date"><Moment format="MMM Do, YYYY">{post.date}</Moment></span></p>
                 </a>
                 <hr />
                 <div dangerouslySetInnerHTML={ {__html: post.content} } />
