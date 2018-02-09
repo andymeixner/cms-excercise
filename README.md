@@ -8,8 +8,8 @@ All in all I think this went pretty well. It's not a very exciting design but th
 
 ## Future Frontend Updates
 The Following are potential future updates to the Frontend React app
-- Pagination.
-  - The current app just requests all (up to 100) posts from the Wordpress install. Pagination would allow for quicker load times, and allow for more than 100 posts to be displayed in the app.
+- Either load more posts as user scrolls or Pagination.
+  - The current app just requests all (up to 100) posts from the Wordpress install. These would allow for quicker initial load times, and allow for more than 100 posts to be displayed in the app.
 - Integrate ACFs & ACF to REST-API plugins for easy user control over the rest of the frontend (Headlines, Header Images, Footer etc...)
 - Show feature image is the background image of the header (if post has one)
 - More exciting design, currently it is more or less just a boilerplate template
