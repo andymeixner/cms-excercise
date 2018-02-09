@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Moment from 'react-moment';
 import Posts from './Posts';
+import Footer from './Footer';
+import { Link } from 'react-router-dom';
 
 
 class Post extends Component {
@@ -68,9 +70,17 @@ class Post extends Component {
                 <div dangerouslySetInnerHTML={ {__html: this.state.post.content.rendered} } />
               </div>
             </div>
+            <div className="row">
+              <div className="col-lg-8 col-md-10 mx-auto">
+                <button className="btn btn-secondary">
+                  <Link to="/"><i className="fa fa-arrow-circle-left"></i> All Posts</Link>
+                </button>
+              </div>
+            </div>
           </div>
         </article>
-
+        <hr />
+        <Footer />
       </div>
     );
   }

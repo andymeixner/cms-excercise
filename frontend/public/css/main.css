@@ -178,6 +178,7 @@ header.masthead {
   background-color: #868e96;
   background-attachment: scroll;
   position: relative;
+  background: url(../img/home-bg.jpg);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -272,6 +273,20 @@ header.masthead {
   .post-preview > a > .post-title {
     font-size: 36px; } }
 
+article {
+  padding-bottom: 50px; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+.btn {
+  margin: 0 auto;
+  display: block;
+  margin-top: 25px; }
+  .btn a:hover, .btn a:focus {
+    text-decoration: none !important; }
+
 .floating-label-form-group {
   font-size: 14px;
   position: relative;
@@ -331,6 +346,12 @@ footer {
     font-size: 14px;
     margin-bottom: 0;
     text-align: center; }
+
+.giphy-gif {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 15px;
+  display: block; }
 
 .btn {
   font-size: 14px;
