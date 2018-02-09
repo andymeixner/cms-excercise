@@ -11,7 +11,7 @@ class App extends Component {
 
     this.state = {
       posts: [],
-      apiRoute: 'https://blog.veridianhomes.com/wp-json/wp/v2'
+      apiRoute: 'http://localhost:8888/wp-json/wp/v2'
     };
   }
 
