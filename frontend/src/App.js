@@ -32,7 +32,7 @@ class App extends Component {
       title: post.title.rendered,
       author: post._embedded.author[0].name,
       date: post.date,
-      excerpt: post.excerpt,
+      excerpt: post.excerpt.rendered,
       content: post.content.rendered
     }
   }

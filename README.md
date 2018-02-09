@@ -14,6 +14,7 @@ The Following are potential future updates to the Frontend React app
 - Show feature image is the background image of the header (if post has one)
 - More exciting design, currently it is more or less just a boilerplate template
 - Next and Previous Post buttons (currently just have an All Posts button to go back to /)
+- Add a post excerpt (truncated) to the post preview
 
 ## Future Plugin Updates
 The Following are potential future updates to the Gifs with Giphy plugin

@@ -14,7 +14,6 @@ class Posts extends Component {
               <div className="post-preview" key={`post-${post.id}}`}>
                 <Link to={`/post/${post.id}`}>
                   <h2 className="post-title">{ post.title }</h2>
-                  <h3 className="post-subtitle">Lorem Ipsum</h3>
                   <p className="post-meta">Posted by
                     <span className="post-author"> { post.author }</span> on
                     <span className="post-date"> <Moment format="MMM Do, YYYY">{post.date}</Moment></span></p>
