@@ -20,11 +20,7 @@ class Posts extends Component {
                     <span className="post-date"> <Moment format="MMM Do, YYYY">{post.date}</Moment></span></p>
                 </Link>
                 <hr />
-                  {
-                    // <Post content={post.content} />
-                  }
               </div>
-
             )}
           </div>
         </div>
