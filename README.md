@@ -22,3 +22,6 @@ The Following are potential future updates to the Gifs with Giphy plugin
   - Add an options page for the plugin in the Wordpress admin panel. This options page would allow more customization of the gif's the user receives (i.e. gif rating) as well as the desired output format of the gif (i.e. iframe embed vs. image).
 - Allow for user to select display/position settings of gif (currently just centers it)
 - Output gif title and/or gif tags underneath gif when searching for gifs
+
+## Known Bugs
+- Encoded html entities in rendered content output not working properly (post titles and post content)
