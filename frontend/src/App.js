@@ -11,12 +11,12 @@ class App extends Component {
 
     this.state = {
       posts: [],
-      apiRoute: 'http://cms-excercise.test/wp-json/wp/v2'
+      apiRoute: 'http://cms-exercise.test/wp-json/wp/v2'
     };
   }
 
   componentDidMount(){
-     var postsEndpoint = '/posts?_embed',
+     var postsEndpoint = '/posts?per_page=100&_embed',
          postsURL = this.state.apiRoute + postsEndpoint;
 
     fetch(postsURL)
