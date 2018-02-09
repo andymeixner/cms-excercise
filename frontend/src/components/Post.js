@@ -9,9 +9,7 @@ class Post extends Component {
 
     this.state = {
       apiRoute: 'http://cms-exercise.test/wp-json/wp/v2',
-      post: '',
-
-      // initially set json keys that cause conflicts with react reserved keywords to empty strings
+      // initially set json keys that cause conflicts with JSX reserved keywords to empty strings
       post: {
         title: {
           rendered: ''
