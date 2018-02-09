@@ -11,7 +11,7 @@ class App extends Component {
 
     this.state = {
       posts: [],
-      apiRoute: 'http://cms-exercise.test/wp-json/wp/v2'
+      apiRoute: 'https://blog.veridianhomes.com/wp-json/wp/v2'
     };
   }
 
