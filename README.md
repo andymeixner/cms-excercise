@@ -7,6 +7,7 @@ This completed exercise includes the following:
 The Following are potential future updates to the Frontend React app
 - Pagination.
   - The current app just requests all (up to 100) posts from the Wordpress install. Pagination would allow for quicker load times, and allow for more than 100 posts to be displayed in the app.
+- Integrate ACFs & ACF to REST-API plugins for easy user control over the rest of the frontend (Headlines, Header Images, Footer etc...)
 
 ## Future Plugin Updates
 The Following are potential future updates to the Gifs with Giphy plugin
