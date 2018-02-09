@@ -8,7 +8,11 @@
     "react-dom": "^16.2.0",
     "react-moment": "^0.7.0",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "1.1.0"
+    "react-scripts": "1.1.0",
+    "grunt": "^0.4.5",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-run": "^0.7.0",
+    "grunt-sass": "^2.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
