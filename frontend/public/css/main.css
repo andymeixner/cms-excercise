@@ -273,6 +273,9 @@ header.masthead {
   .post-preview > a > .post-title {
     font-size: 36px; } }
 
+.post-preview:last-child hr {
+  display: none; }
+
 article {
   padding-bottom: 50px; }
 
