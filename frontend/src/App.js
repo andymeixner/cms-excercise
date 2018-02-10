@@ -16,14 +16,14 @@ class App extends Component {
   }
 
   componentDidMount(){
-     var postsEndpoint = '/posts?per_page=100&_embed',
-         postsURL = this.state.apiRoute + postsEndpoint;
+    var postsEndpoint = '/posts?per_page=100&_embed',
+        postsURL = this.state.apiRoute + postsEndpoint;
 
     fetch(postsURL)
-        .then(res => res.json())
-        .then(posts => this.setState((prevState, props) => {
-            return { posts: posts.map(this.mapPost)};
-        }));
+      .then(res => res.json())
+      .then(posts => this.setState((prevState, props) => {
+          return { posts: posts.map(this.mapPost)};
+      }));
   }
 
   mapPost(post){

@@ -31,9 +31,9 @@ class Post extends Component {
   }
 
   componentDidMount(){
-     var postsEndpoint = '/posts/',
-         postId = this.props.match.params.postId,
-         postURL = this.state.apiRoute + postsEndpoint + postId + '?_embed';
+    var postsEndpoint = '/posts/',
+        postId = this.props.match.params.postId,
+        postURL = this.state.apiRoute + postsEndpoint + postId + '?_embed';
 
     fetch(postURL)
       .then(res => res.json())
