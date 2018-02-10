@@ -23,9 +23,9 @@ The Following are potential future updates to the Gifs with Giphy plugin
 - Allow for user to select display/position settings of gif (currently just centers it)
 - Output gif title and/or gif tags underneath gif when searching for gifs
 
-## Known Bugs
-
 ## Changelog
 ### v1.0.1 - 02/10/2018
 ### Fixed
 - Fixed a bug that didn't allow for proper rendering of html entities in post titles
+
+## Known Bugs
