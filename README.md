@@ -15,6 +15,8 @@ The Following are potential future updates to the Frontend React app
 - More exciting design, currently it is more or less just a boilerplate template
 - Next and Previous Post buttons (currently just have an All Posts button to go back to /)
 - Add a post excerpt (truncated) to the post preview
+- Create custom API endpoints in Wordpress to allow for displaying of content without using `<div dangerouslySetInnerHTML={ {__html: } } />`
+- Handle all of the Wordpress test post "edge cases"
 
 ## Future Plugin Updates
 The Following are potential future updates to the Gifs with Giphy plugin
@@ -24,6 +26,11 @@ The Following are potential future updates to the Gifs with Giphy plugin
 - Output gif title and/or gif tags underneath gif when searching for gifs
 
 ## Changelog
+### v1.0.2 - 02/11/2018
+### Updated
+- Updated frontend js files with more detailed comments
+- Updated manifest.json with correct name
+
 ### v1.0.1 - 02/10/2018
 ### Fixed
 - Fixed a bug that didn't allow for proper rendering of html entities in post titles
