@@ -31,6 +31,8 @@ The Following are potential future updates to the Gifs with Giphy plugin
 - Updated frontend js files with more detailed comments
 - Updated manifest.json with correct name
 
+---
+
 ### v1.0.1 - 02/10/2018
 ### Fixed
 - Fixed a bug that didn't allow for proper rendering of html entities in post titles
