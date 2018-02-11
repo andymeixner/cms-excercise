@@ -6,11 +6,12 @@ import { Link } from 'react-router-dom';
 
 
 class Post extends Component {
+  // set initial state
   constructor(props){
     super(props);
 
     this.state = {
-      apiRoute: 'http://localhost:8888/wp-json/wp/v2',
+      apiRoute: 'http://localhost:8888/wp-json/wp/v2', 
       // initially set json keys that cause conflicts with JSX reserved keywords to empty strings
       post: {
         title: {
@@ -31,6 +32,7 @@ class Post extends Component {
   }
 
   componentDidMount(){
+    // Once component mounted - fetch the correct post (using the postId param from the url) from the Wordpress REST Api
     var postsEndpoint = '/posts/',
         postId = this.props.match.params.postId,
         postURL = this.state.apiRoute + postsEndpoint + postId + '?_embed';
@@ -38,12 +40,14 @@ class Post extends Component {
     fetch(postURL)
       .then(res => res.json())
       .then(res => {
+        // set state to returned post object
         this.setState({
           post: res
         })
       })
   }
 
+  // Render post header and post content
   render(){
     return(
       <div>
@@ -56,6 +60,7 @@ class Post extends Component {
                   <h1><div dangerouslySetInnerHTML={ {__html: this.state.post.title.rendered} } /></h1>
                     <span className="meta">Posted by
                       <span className="post-author"> { this.state.post._embedded.author[0].name}</span> on
+                      {/* use Moment.js to format the date to a more user friendly format */}
                       <span className="post-date"> <Moment format="MMM Do, YYYY">{ this.state.post.date }</Moment></span>
                     </span>
                 </div>
@@ -80,6 +85,7 @@ class Post extends Component {
           </div>
         </article>
         <hr />
+        {/* import Footer */}
         <Footer />
       </div>
     );

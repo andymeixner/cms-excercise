@@ -5,7 +5,9 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Posts from './components/Posts';
 
+
 class App extends Component {
+  // Set initial state
   constructor(props){
     super(props);
 
@@ -16,16 +18,20 @@ class App extends Component {
   }
 
   componentDidMount(){
+    // Once component mounted - fetch the posts from the Wordpress REST Api
     var postsEndpoint = '/posts?per_page=100&_embed',
         postsURL = this.state.apiRoute + postsEndpoint;
 
     fetch(postsURL)
       .then(res => res.json())
+      // Set state to returned posts array (mapped)
       .then(posts => this.setState((prevState, props) => {
           return { posts: posts.map(this.mapPost)};
       }));
   }
 
+  // map post function to pull relevent data out of the returned posts array
+  // called in componentDidMount
   mapPost(post){
     return {
       id: post.id,
@@ -37,6 +43,7 @@ class App extends Component {
     }
   }
 
+  // Render Header, Posts (passing the posts array prop), and Footer
   render() {
     return (
       <div>
