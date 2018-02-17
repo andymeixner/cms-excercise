@@ -11,7 +11,7 @@ class Post extends Component {
     super(props);
 
     this.state = {
-      apiRoute: 'http://localhost:8888/wp-json/wp/v2', 
+      apiRoute: 'http://cms-exercise.test/wp-json/wp/v2', 
       // initially set json keys that cause conflicts with JSX reserved keywords to empty strings
       post: {
         title: {

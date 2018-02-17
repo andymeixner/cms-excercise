@@ -13,7 +13,7 @@ class App extends Component {
 
     this.state = {
       posts: [],
-      apiRoute: 'http://localhost:8888/wp-json/wp/v2'
+      apiRoute: 'http://cms-exercise.test/wp-json/wp/v2'
     };
   }
 
