@@ -5,11 +5,13 @@
     editor.addButton( 'add_gif_button', {
       title: 'Add Gif',
       icon: 'icon giphy-icon',
+
+      // open a modal on button click
       onclick: function() {
         var modalw = 480;
         var modalh = 548;
 
-        // open the gif search plugin in window manager
+        // load the integtrate-gif html in an iframe in the windowManager
         editor.windowManager.open({
           file: url + '/../html/integrate-gif.html',
           width : modalw,

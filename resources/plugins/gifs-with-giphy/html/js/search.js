@@ -4,7 +4,7 @@ $(document).ready(function() {
   var input = $('#search-input');
   input.focus();
 
-  // set up api
+  // set up api and create empty arrays for gif urls and gif ids
   var giphy_api = 'http://api.giphy.com/v1/gifs/',
       search_path = 'search?q=',
       trending_path = 'trending?',
@@ -31,13 +31,17 @@ $(document).ready(function() {
         var gifURL = $(this).children('img').attr('src'),
             htmlToInsert = '<img class="giphy-gif" src="' + gifURL + '">';
 
-        // call functino that inserts the html into the editor and closes the window
+        // call function that inserts the html into the editor and closes the window
         insertGif(htmlToInsert);
       });
     });
   }
 
   // initial ajax request to the api (returns trending gifs)
+  // api request returns json data (response)
+  // loop over the response passing the index of the iteration and the current iteration
+  // push the data I want to use (url and id of each gif) into the arrays (gif_urls[] and gif_ids[])
+  // call the inject images function passing the urls and ids arrays (actually adds the html to the DOM)
   $.ajax({
     url: queryURL,
     type: 'GET',
@@ -52,8 +56,10 @@ $(document).ready(function() {
   });
 
   // run a new ajax request on search
+  // same thing as initial api request, just passes a query string based on the search vs 'trending'
   $('#search-button').click(function(){
     var newQuery = input.val(),
+        //format query so it works in the api request url
         formattedQuery = newQuery.split(' ').join('+');
         new_gif_urls = [],
         new_gif_ids = [],
@@ -66,8 +72,8 @@ $(document).ready(function() {
       type: "GET",
       success: function(response) {
         $.each(response.data, function(index, current) {
-            new_gif_urls.push(current.images.original.url),
-            new_gif_ids.push(current.id);
+          new_gif_urls.push(current.images.original.url),
+          new_gif_ids.push(current.id);
         });
 
         injectImages(new_gif_urls, new_gif_ids);
@@ -85,12 +91,11 @@ $(document).ready(function() {
     }
   });
 
-  // functino for inserting image html into the tinymce editor
+  // function for inserting image html into the tinymce editor once a user clicks on a gif
   function insertGif(imgHtml){
     // insert htmlToInsert
     parent.tinyMCE.activeEditor.execCommand('mceInsertRawHTML', false, imgHtml);
     // close window windowManager
     parent.tinyMCE.activeEditor.windowManager.close(window);
   }
-
 });
