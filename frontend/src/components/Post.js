@@ -5,13 +5,13 @@ import Footer from './Footer';
 import { Link } from 'react-router-dom';
 
 
-class Post extends Component {
+class Post extends Component { 
   // set initial state
   constructor(props){
     super(props);
 
     this.state = {
-      apiRoute: 'http://cms-exercise.test/wp-json/wp/v2', 
+      apiRoute: 'http://cms-exercise.test/wp-json/wp/v2',
       // initially set json keys that cause conflicts with JSX reserved keywords to empty strings
       post: {
         title: {

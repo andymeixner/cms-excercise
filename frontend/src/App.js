@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -24,9 +23,9 @@ class App extends Component {
 
     fetch(postsURL)
       .then(res => res.json())
-      // Set state to returned posts array (mapped)
+      // Set state to returned posts array (each post is mapped as objects from mapPost function)
       .then(posts => this.setState((prevState, props) => {
-          return { posts: posts.map(this.mapPost)};
+        return { posts: posts.map(this.mapPost)};
       }));
   }
 

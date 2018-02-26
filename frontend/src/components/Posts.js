@@ -11,6 +11,7 @@ class Posts extends Component {
       <div className="container">
         <div className="row">
           <div className="col-lg-8 col-md-10 mx-auto">
+
             {/* map post to render the link, title, and meta of each post in the array */}
             {this.props.renderedPosts.map((post) =>
               <div className="post-preview" key={`post-${post.id}}`}>
@@ -25,6 +26,7 @@ class Posts extends Component {
                 <hr />
               </div>
             )} {/* end map */}
+            
           </div>
         </div>
       </div>
