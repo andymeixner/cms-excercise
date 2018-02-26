@@ -85,6 +85,13 @@ $(document).ready(function() {
     }
   });
 
+  function injectRandomImages(random_url) {
+    htmlToInsert = '<img class="giphy-gif" src="' + random_url + '">';
+
+    // call functino that inserts the html into the editor and closes the window
+    insertGif(htmlToInsert);
+  }
+
   // functino for inserting image html into the tinymce editor
   function insertGif(imgHtml){
     // insert htmlToInsert
@@ -92,5 +99,30 @@ $(document).ready(function() {
     // close window windowManager
     parent.tinyMCE.activeEditor.windowManager.close(window);
   }
+
+
+  $('#random-button').click(function(urls){
+    var randomQuery = input.val(),
+        formattedQuery = randomQuery.split(' ').join('+');
+        random_gif_url = '',
+        random_gif_id = '',
+        path = 'random?'
+        queryURL = giphy_api + path + 'tag=' + formattedQuery + '$&api_key=' + api_key;
+
+    $.ajax({
+      url: queryURL,
+      type: "GET",
+      success: function(response) {
+        random_gif_url = response.data.images.original.url;
+        htmlToInsert = '<img class="giphy-gif" src="' + random_gif_url + '">';
+
+        // insert the html into the editor
+        parent.tinyMCE.activeEditor.execCommand('mceInsertRawHTML', false, htmlToInsert);
+        // close the window
+        parent.tinyMCE.activeEditor.windowManager.close(window);
+      }
+    });
+  });
+
 
 });
